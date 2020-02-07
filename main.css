@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #eee;
+}
+
+@keyframes x {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#bagua {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  animation: x 10s infinite linear;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 500px) {
+  #bagua {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+#bagua > div:first-child {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background-color: black;
+}
+
+#bagua > div:nth-child(2) {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background-color: white;
+}
+
+#bagua > div:nth-child(3) {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  margin-left: -100px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+@media (max-width: 500px) {
+  #bagua > div:nth-child(3) {
+    margin-left: -50px;
+  }
+}
+
+#bagua > div:nth-child(4) {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  margin-left: -100px;
+  border-radius: 50%;
+  bottom: 0;
+  background-color: white;
+}
+
+@media (max-width: 500px) {
+  #bagua > div:nth-child(4) {
+    margin-left: -50px;
+  }
+}
+
+#bagua > div:nth-child(5) {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  margin-left: -25px;
+  border-radius: 50%;
+  top: 75px;
+  background-color: white;
+}
+
+@media (max-width: 500px) {
+  #bagua > div:nth-child(5) {
+    width: 25px;
+    height: 25px;
+    margin-left: -12.5px;
+    top: 37.5px;
+  }
+}
+
+#bagua > div:nth-child(6) {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  margin-left: -25px;
+  border-radius: 50%;
+  bottom: 75px;
+  background-color: black;
+}
+
+@media (max-width: 500px) {
+  #bagua > div:nth-child(6) {
+    width: 25px;
+    height: 25px;
+    margin-left: -12.5px;
+    bottom: 37.5px;
+  }
+}
+
+#wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#bagua-description {
+  margin-top: 1em;
+}
